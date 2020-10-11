@@ -33,6 +33,12 @@ nav h1{
 .descriptions li{
     display:inline-block;
 }
+
+h2.* {
+  text-align: center;
+
+}
+
 /* Footer */
 footer{
     background: navy;

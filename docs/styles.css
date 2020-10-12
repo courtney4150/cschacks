@@ -34,10 +34,17 @@ nav h1{
     display:inline-block;
 }
 
-h2 {
+.descriptions h2 {
   text-align: center;
 
 }
+
+.importance h2{
+  text-align: center;
+
+}
+
+
 
 /* Footer */
 footer{

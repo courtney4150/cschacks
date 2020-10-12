@@ -30,9 +30,9 @@ nav h1{
     font-size: 50px;
 }
 /* descriptions formatting */
-.descriptions li{
+/*.descriptions li{
     display:inline-block;
-}
+}*/
 
 .descriptions h2 {
   text-align: center;

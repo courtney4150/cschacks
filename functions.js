@@ -1,10 +1,3 @@
-function sayHello()
-{
-   alert("Hello World")
-}
-
-
-
 function buildQuiz()
 {
   const output = [];
@@ -31,6 +24,11 @@ function buildQuiz()
   );
 
   quizContainer.innerHTML = output.join('');
+}
+
+function showResults()
+{
+
 }
 
 const quizContainer = document.getElementById('quiz');
@@ -69,7 +67,4 @@ const myQuestions = [
 
 buildQuiz();
 
-function showResults()
-{
-
-}
+sumitButton.addeventListener('click', showResults);

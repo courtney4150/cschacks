@@ -7,73 +7,52 @@ body{
 }
 /* Header formatting */
 header{
-    background: salmon;
-    height: 30px;
-    padding: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mountains.jpeg");
+    margin:0;
+    padding:10px;
+    /* Set a specific height */
+    height: 300px;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;    
     text-align:center;
 }
-a{
+header ul li a{
     color: white;
     text-decoration: none;
     font-size:20px;
 }
-nav ul{
+header ul{
     margin:20;
     padding:20;
     list-style-type: none;
     text-align: center;
 }
-nav li{
+header li{
     display:inline-block;
     margin-right: 50px;
     text-align: center;
 }
-nav h1{
+header h1{
     font-size: 50px;
+    padding-top: 30px;
+    color: #b2d8d8;
+
 }
 /* descriptions formatting */
-/*.descriptions li{
-    display:inline-block;
-}*/
-
-.descriptions h2 {
-  text-align: center;
-  padding:20;
+.descriptions {
+    color: black;
+    padding-left:30px;
+    padding-right: 30px;
 }
-
-
-p {
-  text-align: center;
-
+.descriptions p{
+    padding-bottom: 30px;
 }
-
-body, html {
-    height: 100%;
-}
-
-/* The hero image */
-.hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mountains.jpeg");
-
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-/* Place text in the middle of the image */
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+.descriptions a{
+    text-decoration: none;
+    color:black;
 }
 
 /* Footer */
@@ -84,4 +63,11 @@ footer{
     padding: 10px 10px;
     text-transform: uppercase;
     text-align: center;
+}
+
+
+
+/* not sure what this does*/
+body, html {
+    height: 100%;
 }

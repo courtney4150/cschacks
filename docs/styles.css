@@ -7,7 +7,7 @@ body{
 }
 /* Header formatting */
 header{
-    background-image: url("../images/sunrise.jpg");
+    background-image: url("images/sunrise.jpg");
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@ header h2{
 }
 /* image descritpion formating */
 .i_descriptions {
-    background-image: url("../images/blue.jpg");
+    background-image: url("images/blue.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;

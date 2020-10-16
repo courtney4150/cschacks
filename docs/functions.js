@@ -71,8 +71,8 @@ function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
     for(var i=0; i<questions.length; i++)
     {
 
-      const answerConatiner = answerContainers[questionNumber];
-      const selector = `input[name=question${questionNumber}]: checked`;
+      //const answerContainer = answerContainers[questionNumber];
+      //const selector = `input[name=question${questionNumber}]: checked`;
       const userAnswer = (answerConatiner[i].querySelector('input[name=question'+i+']:checked') || {}).value;
 
       if(userAnswer === questions[i].correctAnswer)

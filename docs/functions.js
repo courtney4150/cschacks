@@ -39,7 +39,7 @@ function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
   function showQuestions(questions, quizContainer)
   {
   const output = [];
-  const answers = [];
+  const answers;
 
   for(var i=0; i<questions.length; i++)
   {
@@ -48,7 +48,7 @@ function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
       {
         answers.push(
           '<label>'
-            <input type="radio" name="question'+i+'" value="'+letter+'">
+            '<input type="radio" name="question'+i+'" value="'+letter+'">'
             + letter + ': ' + questions[i].answers[letter] + '</label>'
         );
       }

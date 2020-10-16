@@ -86,5 +86,6 @@ const myQuestions = [
 ];
 
 buildQuiz();
+showQuiz();
 
-sumitButton.addeventListener('click', showResults);
+submitButton.addeventListener('click', showResults);

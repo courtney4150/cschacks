@@ -89,14 +89,14 @@ function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
     resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
   }
 
+}
 
-  showQuestions(questions, quizContainer);
+showQuestions(questions, quizContainer);
 
 
-  submitButton.onclick = function()
-  {
-    showResults(questions, quizContainer, resultsContainer);
-  }
+submitButton.onclick = function()
+{
+  showResults(questions, quizContainer, resultsContainer);
 }
 
 buildQuiz(myQuestions, quizContainer, resultsContainer, submitButton);

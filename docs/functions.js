@@ -27,7 +27,7 @@
     quizContainer.innerHTML = output.join('');
   }
 
-  function showResults()
+  function results()
   {
     const answerContainers = quizContainer.querySelectorAll('.answers');
     let numCorrect = 0;
@@ -88,5 +88,5 @@
 
   quiz();
 
-  submitButton.addeventListener('click', showResults);
+  submitButton.addeventListener('click', results);
 })();

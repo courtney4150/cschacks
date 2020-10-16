@@ -1,92 +1,98 @@
-(function(){
-  function quiz()
+
+function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
+{
+  function showQuestions(questions, quizContainer, resultsContainer, submitButton)
   {
-    const output = [];
+  const output = [];
+  const answer = [];
 
-    myQuestions.forEach(
-      (currentQuestion, questionNumber) => {
-        const answer = [];
-
-        for(letter in currentQuestion.answers) {
-          answers.push(
-            `<label>
-              <input type="radio" name="question${questionNumber}" value="${letter}">
-              ${letter}
-              ${currentQuestion.answers[letter]}
-            </label>`
-          );
-        }
-
-        output.push(
-          `<div class="question"> ${currentQuestion.question} </div>
-          <div class="answers> ${answers.join('')}" </div>`
+  for(var i=0; i<questions.length; i++)
+  {
+      answers = [];
+      for(letter in questions[i].answers)
+      {
+        answers.push(
+          '<label>'
+            <input type="radio" name="question'+i+'" value="'+letter+'">
+            + letter + ': ' + questions[i].answers[letter] + '</label>'
         );
       }
-    );
 
-    quizContainer.innerHTML = output.join('');
+
+      output.push(
+        '<div class="question">' questions[i].question + '</div>' +
+        '<div class="answers>' answers.join('') + '</div>'
+      );
+  }
+  quizContainer.innerHTML = output.join('');
   }
 
-  function results()
+  function quizResults(questions, quizContainer, resultsContainer)
   {
     const answerContainers = quizContainer.querySelectorAll('.answers');
     let numCorrect = 0;
+    let userAnswer = '';
 
-    myQuestions.forEach((currentQuestion, questionNumber) -> {
+    for(var i=0; i<questions.length; i++)
+    {
 
       const answerConatiner = answerContainers[questionNumber];
       const selector = `input[name=question${questionNumber}]: checked`;
-      const userAnswer = (answerConatiner.querySelector(selector) || {}).value;
+      const userAnswer = (answerConatiner[i].querySelector('input[name=question'+i+']:checked') || {}).value;
 
-      if(userAnswer === currentQuestion.correctAnswer){
+      if(userAnswer === currentQuestion.correctAnswer)
+      {
         numCorrect++;
 
-        answerContainers[questionNumber].style.color = 'lightgreen';
+        answerContainers[i].style.color = 'lightgreen';
       }
-      else{
-        answerContainers[questionNumber].style.color = 'red';
+      else
+      {
+        answerContainers[i].style.color = 'red';
       }
     }
-  );
 
-  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
   }
 
-  const quizContainer = document.getElementById('quiz');
-  const resultsContainer = document.getElementById('results');
-  const submitButton = document.getElementById('submit');
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
 
-  const myQuestions = [
-  {
-    question: "q1?",
-    answers: {
-      a: "answera",
-      b: "answerb",
-      c: "answerc"
-    },
-    correctAnswer: "c"
+const myQuestions = [
+{
+  question: "q1?",
+  answers: {
+    a: "answera",
+    b: "answerb",
+    c: "answerc"
   },
-  {
-    question: "q2?",
-    answers: {
-      a: "answera",
-      b: "answerb",
-      c: "answerc"
-    },
-    correctAnswer: "c"
+  correctAnswer: "c"
+},
+{
+  question: "q2?",
+  answers: {
+    a: "answera",
+    b: "answerb",
+    c: "answerc"
   },
-  {
-    question: "q3?",
-    answers: {
-      a: "answera",
-      b: "answerb",
-      c: "answerc"
-    },
-    correctAnswer: "c"
-  }
-  ];
+  correctAnswer: "c"
+},
+{
+  question: "q3?",
+  answers: {
+    a: "answera",
+    b: "answerb",
+    c: "answerc"
+  },
+  correctAnswer: "c"
+}
+];
 
-  quiz();
+buildQuiz();
 
-  submitButton.addeventListener('click', results);
-})();
+submitButton.onclick = function()
+{
+  showResults(questions, quizContainer, resultsContainer);
+}
+}

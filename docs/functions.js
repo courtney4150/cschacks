@@ -1,5 +1,5 @@
 (function(){
-  function buildQuiz()
+  function quiz()
   {
     const output = [];
 
@@ -86,8 +86,7 @@
   }
   ];
 
-  buildQuiz();
-  showQuiz();
+  quiz();
 
   submitButton.addeventListener('click', showResults);
 })();

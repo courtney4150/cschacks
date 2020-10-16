@@ -32,7 +32,6 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
-buildQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
 {
@@ -99,3 +98,5 @@ function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
     showResults(questions, quizContainer, resultsContainer);
   }
 }
+
+buildQuiz(myQuestions, quizContainer, resultsContainer, submitButton);

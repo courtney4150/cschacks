@@ -1,3 +1,7 @@
+function Hello() {
+   alert("Hello, World");
+}
+
 const myQuestions = [
 {
   question: "q1?",

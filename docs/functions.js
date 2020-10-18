@@ -1,6 +1,11 @@
-function Hello() {
-   alert("Hello, World");
-}
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+const quiz = document.getElementById('quiz');
+const myQuestions = document.getElementById('questions');
+const a = document.getElementById('A');
+const b = document.getElementById('B');
+const c = document.getElementById('C');
 
 const myQuestions = [
 {
@@ -32,17 +37,10 @@ const myQuestions = [
 }
 ];
 
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-
-
-function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
+function showQuestions(questions, quizContainer)
 {
-  function showQuestions(questions, quizContainer)
-  {
-  const output = [];
-  const answers;
+const output = [];
+const answers;
 
   for(var i=0; i<questions.length; i++)
   {
@@ -56,14 +54,17 @@ function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
         );
       }
 
-
       output.push(
         '<div class="question">' questions[i].question + '</div>' +
         '<div class="answers>' answers.join('') + '</div>'
       );
   }
-  quizContainer.innerHTML = output.join('');
-  }
+quizContainer.innerHTML = output.join('');
+}
+
+function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
+{
+
 
   function quizResults(questions, quizContainer, resultsContainer)
   {

@@ -3,7 +3,7 @@
   <head>
     <title>Wellness Poll</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="/docs/functions.js"></script>
+    <script src="functions.js"></script>
   </head>
   <body>
     <header>
@@ -16,18 +16,25 @@
             <li><a href="About_Us.html">About us</a></li>
         </ul>
       <h2>Wellness Poll</h2>
-  </header>
+    </header>
 
-  <div id="quiz"></div>
-  <button id="submit">Submit Quiz</button>
-  <div id="results"></div>
-  <input type = "button" onclick = "Hello();" name = "ok" value = "Click Me" />
-  <button onClick="JavaScript:Hello()">Button 3</button>
+    <div id="container">
+      <div id="quiz">
+        <div id="question"></div>
+        <div id="choices">
+          <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+          <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+          <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+        </div>
+      </div>
+      <button id="submit">Submit Quiz</button>
+      <div id="results"></div>
+    </div>
+    <script src="functions.js"></script>
 
-
-  <footer>
-    ski's the limit * University of Pittsburgh * CSC Hacks 2020
-  </footer>
+    <footer>
+      ski's the limit * University of Pittsburgh * CSC Hacks 2020
+    </footer>
 
   </body>
 </html>

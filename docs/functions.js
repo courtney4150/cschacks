@@ -7,7 +7,7 @@ const a = document.getElementById('A');
 const b = document.getElementById('B');
 const c = document.getElementById('C');
 
-const myQuestions = [
+myQuestions = [
 {
   question: "q1?",
   answers: {

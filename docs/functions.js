@@ -47,11 +47,7 @@ const answers = [];
       answers = [];
       for(letter in questions[i].answers)
       {
-        answers.push(
-          '<label>'
-            '<input type="radio" name="question'+i+'" value="'+letter+'">'
-            + letter + ': ' + questions[i].answers[letter] + '</label>'
-        );
+        answers.push('<label>' '<input type="radio" name="question'+i+'" value="'+letter+'">' + letter + ': ' + questions[i].answers[letter] + '</label>');
       }
 
       output.push(

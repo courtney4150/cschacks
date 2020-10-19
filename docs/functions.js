@@ -40,7 +40,7 @@ myQuestions = [
 function showQuestions(questions, quizContainer)
 {
 const output = [];
-const answers;
+const answers = [];
 
   for(var i=0; i<questions.length; i++)
   {

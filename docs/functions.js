@@ -1,100 +1,74 @@
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-const quiz = document.getElementById('quiz');
-const myQuestions = document.getElementById('questions');
-const a = document.getElementById('A');
-const b = document.getElementById('B');
-const c = document.getElementById('C');
+start = document.getElementById('start');
+quizContainer = document.getElementById('quiz');
+resultsContainer = document.getElementById('results');
+quiz = document.getElementById('quiz');
+a = document.getElementById('a');
+b = document.getElementById('b');
+c = document.getElementById('c');
+question = document.getElementById('question');
+nextButton = document.getElementById('next');
+results = document.getElementById('results');
+results.style.display = "none";
+runningQuestion = 0;
+numCorrect = 0;
 
 myQuestions = [
 {
-  question: "q1?",
-  answers: {
-    a: "answera",
-    b: "answerb",
-    c: "answerc"
-  },
+  question: "What is the best pet?",
+  a: "dog",
+  b: "fish",
+  c: "cat",
   correctAnswer: "c"
 },
 {
-  question: "q2?",
-  answers: {
-    a: "answera",
-    b: "answerb",
-    c: "answerc"
-  },
+  question: "this is the second question?",
+  a: "aaaaaaa",
+  b: "bbbbbbb",
+  c: "ccccccc",
   correctAnswer: "c"
 },
 {
   question: "q3?",
-  answers: {
-    a: "answera",
-    b: "answerb",
-    c: "answerc"
-  },
+  a: "answera",
+  b: "answerb",
+  c: "answerc",
   correctAnswer: "c"
 }
 ];
 
-function showQuestions(questions, quizContainer)
+function showQuestion()
 {
-const output = [];
-const answers = [];
+  question.innerHTML = "<p>" + myQuestions[runningQuestion].question + "</p>";
+  a.innerHTML = myQuestions[runningQuestion].a;
+  b.innerHTML = myQuestions[runningQuestion].b;
+  c.innerHTML = myQuestions[runningQuestion].c;
+}
 
-  for(var i=0; i<questions.length; i++)
+start.addEventListener("click", showQuestion());
+
+
+function checkAnswer(answer)
+{
+  if(answer === myQuestions[runningQuestion].correctAnswer)
   {
-      answers = [];
-      for(letter in questions[i].answers)
-      {
-        answers.push('<label>' '<input type="radio" name="question'+i+'" value="'+letter+'">' + letter + ': ' + questions[i].answers[letter] + '</label>');
-      }
-
-      output.push('<div class="question">' questions[i].question + '</div>' + '<div class="answers>' answers.join('') + '</div>');
+    numCorrect++;
+    document.getElementById(myQuestions[runningQuestion].correctAnswer).style.background='green';
   }
-quizContainer.innerHTML = output.join('');
 }
 
-function buildQuiz(questions, quizContainer, resultsContainer, submitButton)
+function nextQuestion()
 {
-
-
-  function quizResults(questions, quizContainer, resultsContainer)
+  document.getElementById(myQuestions[runningQuestion].correctAnswer).style.background=null;
+  runningQuestion++;
+  showQuestion();
+  if(runningQuestion === myQuestions.length-1)
   {
-    const answerContainers = quizContainer.querySelectorAll('.answers');
-    let numCorrect = 0;
-    let userAnswer = '';
-
-    for(var i=0; i<questions.length; i++)
-    {
-
-      //const answerContainer = answerContainers[questionNumber];
-      //const selector = `input[name=question${questionNumber}]: checked`;
-      const userAnswer = (answerConatiner[i].querySelector('input[name=question'+i+']:checked') || {}).value;
-
-      if(userAnswer === questions[i].correctAnswer)
-      {
-        numCorrect++;
-
-        answerContainers[i].style.color = 'lightgreen';
-      }
-      else
-      {
-        answerContainers[i].style.color = 'red';
-      }
-    }
-
-    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+    nextButton.style.display = "none";
+    results.style.display = "block";
   }
-
 }
 
-showQuestions(questions, quizContainer);
-
-
-submitButton.onclick = function()
+function quizResults()
 {
-  showResults(questions, quizContainer, resultsContainer);
+  document.getElementById('results').innerHTML = "<p>Your score is " + numCorrect + " out of " + myQuestions.length + " questions!</p>";
 }
-
-buildQuiz(myQuestions, quizContainer, resultsContainer, submitButton);

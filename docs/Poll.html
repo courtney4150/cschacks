@@ -19,21 +19,24 @@
     </header>
 
     <div id="container">
+      <h1>Description about the wellness poll</h1>
+      <p>Instructions for how to use the poll</p>
+      <button id="start">Start Poll!</button>
       <div id="quiz">
         <div id="question"></div>
         <div id="choices">
-          <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-          <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-          <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+          <button class="choice" id="a" onclick="checkAnswer('a')"></button>
+          <button class="choice" id="b" onclick="checkAnswer('b')"></button>
+          <button class="choice" id="c" onclick="checkAnswer('c')"></button>
         </div>
+        <button id="next" onclick="nextQuestion()">Next Question</button>
       </div>
-      <button id="submit">Submit Quiz</button>
-      <div id="results"></div>
+      <button id="results" onclick="quizResults()">Get Results!</button>
     </div>
     <script src="functions.js"></script>
 
     <footer>
-      ski's the limit * University of Pittsburgh * CSC Hacks 2020
+      sci's the limit * University of Pittsburgh * CSC Hacks 2020
     </footer>
 
   </body>

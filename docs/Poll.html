@@ -21,14 +21,16 @@
     <div id="container">
       <h1>Description about the wellness poll</h1>
       <p>Instructions for how to use the poll</p>
-      <button id="start">Start Poll!</button>
+      <button id="start" onclick="showQuestion()">Start Poll!</button>
       <div id="quiz">
         <div id="question"></div>
         <div id="choices">
-          <button class="choice" id="a" onclick="checkAnswer('a')"></button>
-          <button class="choice" id="b" onclick="checkAnswer('b')"></button>
-          <button class="choice" id="c" onclick="checkAnswer('c')"></button>
+          <button class="choice" id="a" onclick="getPoints('a')"></button>
+          <button class="choice" id="b" onclick="getPoints('b')"></button>
+          <button class="choice" id="c" onclick="getPoints('c')"></button>
+          <button class="choice" id="d" onclick="getPoints('d')"></button>
         </div>
+        <p id="response"><p>
         <button id="next" onclick="nextQuestion()">Next Question</button>
       </div>
       <button id="results" onclick="quizResults()">Get Results!</button>

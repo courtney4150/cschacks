@@ -17,26 +17,27 @@
         </ul>
       <h2>Wellness Poll</h2>
     </header>
-
-    <div id="container">
-      <h1>Description about the wellness poll</h1>
-      <p>Instructions for how to use the poll</p>
-      <button id="start" onclick="showQuestion()">Start Poll!</button>
-      <div id="quiz">
-        <div id="question"></div>
-        <div id="choices">
-          <button class="choice" id="a" onclick="getPoints('a')"></button>
-          <button class="choice" id="b" onclick="getPoints('b')"></button>
-          <button class="choice" id="c" onclick="getPoints('c')"></button>
-          <button class="choice" id="d" onclick="getPoints('d')"></button>
+    <div class="poll">
+      <div id="container" class="descriptions">
+        <h1><i>Find out what simple steps you can take to improve your mental health!</i></h1>
+        <p><i>Press them buttons and I recon you'll feel chipper in no time</i></p>
+        <button id="start" onclick="showQuestion()" class="gradient-button-1">Start Poll!</button>
+        <div id="quiz">
+          <div id="question"></div>
+          <div id="choices">
+            <button class="choice dark-minimal-btn" id="a" onclick="getPoints('a')" ></button>
+            <button class="choice dark-minimal-btn" id="b" onclick="getPoints('b')"></button>
+            <button class="choice dark-minimal-btn" id="c" onclick="getPoints('c')"></button>
+            <button class="choice dark-minimal-btn" id="d" onclick="getPoints('d')"></button>
+          </div>
+          <p id="response"><p>
+          <button id="next" onclick="nextQuestion()" class="btn-3d-1">Next Question</button>
         </div>
-        <p id="response"><p>
-        <button id="next" onclick="nextQuestion()">Next Question</button>
+        <button id="results" onclick="quizResults()" class="gradient-button-2">Get Results!</button>
+        <br><br>
       </div>
-      <button id="results" onclick="quizResults()">Get Results!</button>
+      <script src="functions.js"></script>
     </div>
-    <script src="functions.js"></script>
-
     <footer>
       sci's the limit * University of Pittsburgh * CSC Hacks 2020
     </footer>

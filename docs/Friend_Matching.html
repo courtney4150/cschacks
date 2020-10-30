@@ -32,34 +32,20 @@
   
   <label for="email">Email ID:</label><br>
   <input type="text" id="email" Email ID="email" value=""><br>
-  <script>
-  saved_emails.txt.write("email");
-  </script>
   <input type="submit" value="Submit">
   
 </form> 
 
 <p>If you click the "Submit" button, the form-data will be sent to a file called "/Users/eeshamukherjee/test1/saved_emails.txt".</p>
 
-var fs = require("fs");
-console.log("Going to write into existing file");
-// Open a new file with name input.txt and write Simply Easy Learning! to it.
-fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
-   if (err) {
-      return console.error(err);
-   }
-   console.log("Data written successfully!");
-   console.log("Let's read newly written data");
-   // Read the newly written file and print all of its content on the console
-   fs.readFile('input.txt', function (err, data) {
-      if (err) {
-         return console.error(err);
-      }
-      console.log("Asynchronous read: " + data.toString());
-   });
-});
 </body>
 </html>
+  var fs = require("fs");
+  fs.open('saved_emails.txt', r+, function(err, fd) {
+   if (err) {
+    return console.error(err);
+   }
+  
     <br>
     <br>
     <br>

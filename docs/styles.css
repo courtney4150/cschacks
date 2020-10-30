@@ -1,5 +1,5 @@
 body{
-    background-color: aqua;
+    background-color: rgb(3, 219, 219);
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -46,6 +46,131 @@ header h2{
     font-size: 50px;
 }
 
+/* news page headers*/
+.grass{
+    background-image: url("images/grass.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a specific height */
+    height: 300px;
+    margin:0;
+    padding:10px;
+    position: relative;    
+    filter: blur(40%);
+}
+.grass a{
+    text-decoration: none;
+    color:white;
+}
+
+.grass h1{
+    color:black;
+    font-size: 50px;
+    text-align:center;
+}
+.grass h4{
+    color:black;
+    font-size: 30px;
+    text-align:left;
+}
+
+.homeless{
+    background-image: url("images/boyHelpingHomeless.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a specific height */
+    height: 300px;
+    margin:0;
+    padding:10px;
+    position: relative;    
+}
+.homeless a{
+    text-decoration: none;
+    color:white;
+}
+
+.homeless h1{
+    color:black;
+    position:relative;
+    text-align: center;
+    font-size: 50px;
+    padding-left: 170px;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+.homeless h4{
+    color:white;
+    font-size: 30px;
+    text-align:left;
+}
+
+.couples{
+    background-image: url("images/longCouple.jpg");
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a specific height */
+    height: 300px;
+    margin:0;
+    padding:10px;
+    position: relative;    
+}
+.couples a{
+    text-decoration: none;
+    color:white;
+}
+
+.couples h1{
+    color:black;
+    font-size: 50px;
+    text-align:center;
+}
+.couples h4{
+    color:white;
+    font-size: 30px;
+    text-align:left;
+}
+.solar{
+    background-image: url("images/solar.jpg");
+    /* Position and center the image to scale nicely on all screens */
+    background-position-y:-500px ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a specific height */
+    height: 300px;
+    margin:0;
+    padding:10px;
+    position: relative;  
+}
+.solar a{
+    text-decoration: none;
+    color:black;
+}
+
+.solar h1{
+    color:black;
+    position:relative;
+    text-align: center;
+    font-size: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 5px;
+}
+.solar h4{
+    color:black;
+    font-size: 30px;
+    text-align:left;
+    margin-top: 100px;
+}
+.quote{
+    text-align: center;
+    margin:50px;
+    font-size: 20px;
+}
+
 /* background images*/
 .poll{
     background-image: url("images/yellow.jpg");
@@ -75,13 +200,35 @@ header h2{
     background-size: cover;
     padding:10px;
 }
-/* image descritpion formating */
-.i_descriptions {
+.about_backgroud {
+    background-image: url("images/computer.jpg");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:10px;
+    color: white;
+    padding-left:30px;
+    padding-right: 30px;
+    margin:0;
+}
+
+.news{
+    background-image: url("images/white.jpg");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home {
     background-image: url("images/blue.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
+
+/* image descritpion formating */
+.i_descriptions{
     color: black;
     display: flex;
     flex-direction: row;
@@ -92,6 +239,9 @@ header h2{
 .i_descriptions a{
     color: black;
     text-decoration: none;
+}
+.i_descriptions h3{
+    font-size: 17px;
 }
 
 .i_descriptions figure{
@@ -118,36 +268,41 @@ header h2{
 
 
 /* textual descriptions formatting */
-.details {
-    background-image: url("images/computer.jpg");
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.details{
     padding:10px;
-    color: white;
     padding-left:30px;
     padding-right: 30px;
     margin:0;
 }
-.about header{
-    filter:brightness(80%)
-}
-.about header ul li a{
-    text-decoration: none;
-    font-size:20px;
-    color:black;
-}
-.about footer{
-    filter: brightness(80%);
-}
-.details h2, h3{
+
+.details h2{
     text-transform: capitalize;
     font-size: 25px;
     padding-top: 20px;
     padding-bottom: 0px;
 }
+.details h3{
+    text-transform: capitalize;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
 .details p{
     padding-bottom: 5px;
+}
+
+/*For the news pages*/
+.closer{
+    background-color: gray;
+    color:black;
+    padding:10px;
+    margin:0;
+    font-size: 10px;
+    text-align: center;
+}
+.closer a{
+    text-decoration: none;
+    color:black;
 }
 
 /* Footer */
@@ -160,7 +315,14 @@ footer{
     text-align: center;
 }
 
+/* make the about us page a bit darker */
+.about header{
+    filter:brightness(80%)
+}
 
+.about footer{
+    filter: brightness(80%);
+}
 
 /* not sure what this does*/
 body, html {

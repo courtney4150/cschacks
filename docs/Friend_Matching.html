@@ -20,23 +20,24 @@
     <!-- Just to look at picture, can delete -->
     <!DOCTYPE html>
 
-First Name: <input type="text" id="myText" name="fname" value=" "><br>
-Last Name: <input type="text" id="myText" name="lname" value=" "><br>
-Email: <input type="text" id="myText" name="email" value=" "><br>
+First Name: <input type="text" id="myFirst" name="fname" value=" "><br>
+Last Name: <input type="text" id="myLast" name="lname" value=" "><br>
+Email: <input type="text" id="myEmail" name="email" value=" "><br>
 
 <p>Click the button to display the value of the name attribute of the text field.</p>
 
 <button onclick="myFunction()">Try it</button>
 
 <p id="demo"></p>
-
+    
 <script>
 function myFunction() {
-  var emails = [];
-  fruits.push("email");
+  var x = document.getElementById("myLast").name;
+  document.getElementById("demo").innerHTML = x;
 }
 </script>
 
+    
 </body>
 </html>
     <br>

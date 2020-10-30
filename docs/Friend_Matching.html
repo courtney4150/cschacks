@@ -35,7 +35,27 @@
 </form> 
 
 <p>If you click the "Submit" button, the form-data will be sent to a file called "/Users/eeshamukherjee/test1/saved_emails.txt".</p>
-  
+
+    <html>
+<body>
+
+Name: <input type="text" id="myText" name="fname" value="Mickey"><br>
+
+<p>Click the button to display the value of the name attribute of the text field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myText").name;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
     <br>
     <br>
     <br>

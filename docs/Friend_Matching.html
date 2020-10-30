@@ -26,16 +26,24 @@ Email: <input type="text" id="myEmail" name="email" value=" "><br>
 
 <p>Click the button to display the value of the name attribute of the text field.</p>
 
-<button onclick="myFunction()">Try it 2</button>
+<button onclick="myFunction()">Try it 3</button>
 
-<p id="demo"></p>
+<p id="FName"></p>
+<p id="LName"></p>
+<p id="emails"></p>
     
 <script>
 var saved_emails = [];
+var saved_FirstName = [];
+var saved_LastName = [];
 function myFunction() {
-  var email = document.getElementById("myEmail").value;
-  saved_emails.push(email)
-  document.getElementById("demo").innerHTML = saved_emails;
+  saved_emails.push(document.getElementById("myEmail").value)
+  saved_FirstName.push(document.getElementById("myFirst").value);
+  saved_LastName.push(document.getElementById("myLast").value);
+  
+  document.getElementById("emails").innerHTML = saved_emails;
+  document.getElementById("FName").innerHTML = saved_FirstName;
+  document.getElementById("LName").innerHTML = saved_LastName;
 }
 </script>
 

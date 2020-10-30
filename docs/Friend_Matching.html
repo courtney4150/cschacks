@@ -31,13 +31,11 @@ Email: <input type="text" id="myEmail" name="email" value=" "><br>
 <p id="demo"></p>
     
 <script>
+var saved_emails = [];
 function myFunction() {
-  var x = document.getElementById("myEmail").value;
-  document.getElementById("demo").innerHTML = x;
-  set fso = CreateObject("Scripting.FileSystemObject");
-  set s   = fso.CreateTextFile("https://github.com/courtney4150/cschacks/edit/master/docs/Friend_Matching_emails.txt", True);
-  s.writeline(x);
-  s.Close();
+  var email = document.getElementById("myEmail").value;
+  saved_emails.push(email)
+  document.getElementById("demo").innerHTML = saved_emails;
 }
 </script>
 

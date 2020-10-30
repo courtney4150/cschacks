@@ -26,7 +26,7 @@ Email: <input type="text" id="myEmail" name="email" value=" "><br>
 
 <p>Click the button to display the value of the name attribute of the text field.</p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction()">Try it 1</button>
 
 <p id="demo"></p>
     
@@ -34,7 +34,10 @@ Email: <input type="text" id="myEmail" name="email" value=" "><br>
 function myFunction() {
   var x = document.getElementById("myEmail").value;
   document.getElementById("demo").innerHTML = x;
-  var email_list = [];
+  set fso = CreateObject("Scripting.FileSystemObject");
+  set s   = fso.CreateTextFile("https://github.com/courtney4150/cschacks/edit/master/docs/Friend_Matching_emails.txt", True);
+  s.writeline(x);
+  s.Close();
 }
 </script>
 

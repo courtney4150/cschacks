@@ -11,6 +11,7 @@ question = document.getElementById('question');
 nextButton = document.getElementById('next');
 results = document.getElementById('results');
 response = document.getElementById('response');
+recommendation = document.getElementById('recommendation');
 
 //defining the questions and answers
 myQuestions = [
@@ -87,6 +88,10 @@ points = 0;
 function showQuestion()
 {
   start.style.display = "none";
+  a.style.opacity = "1";
+  b.style.opacity = "1";
+  c.style.opacity = "1";
+  d.style.opacity = "1";
   results.style.display = "none";
   a.style.display = "inline";
   b.style.display = "inline";
@@ -157,6 +162,7 @@ function nextQuestion()
   if(runningQuestion === 8)
   {
     nextButton.style.display = "none";
+    nextButton.style.opacity = "0";
     results.style.display = "block";
     results.style.opacity = "1";
   }
@@ -167,4 +173,20 @@ function quizResults()
 {
   results.style.opacity = "1";
   results.innerHTML = "<p>Your score is " + points + "!</p>";
+  if(points > 24)
+  {
+    recommendation.innerHTML = "<p>Keep up the awesome work!</p>"
+  }
+  else if (points > 16)
+  {
+    recommendation.innerHTML = "<p>Check out our happy news page!</p>"
+  }
+  else if (points > 10)
+  {
+    recommendation.innerHTML = "<p>Check out our friend matching service! Everyone needs someone to talk to.</p>"
+  }
+  else if (points > 0)
+  {
+    recommendation.innerHTML = "<p>Here are the University's mental health resources. They offer a ton of resources and are always there to help.</p>"
+  }
 }

@@ -28,10 +28,8 @@ Email: <input type="text" id="myEmail" name="email" value=" "><br>
 
 <button onclick="myFunction()">Click to find your friend!</button>
 
-<p id="FName"></p>
-<p id="LName"></p>
+<p id="Bestfriend"></p>
 <p id="emails"></p>
-<p id="random"></p>
     
 <script>
 var saved_emails = ["tania@gmail.com", "meghaneel@gmail.com", "rachelLash@gmail.come", "quinNhunk@gmail.com", "blake@yahoo.com", "dan@kik.com", "carly@icarly.com", "mikeNug@usa.com"];
@@ -46,8 +44,13 @@ function myFunction() {
   //document.getElementById("emails").innerHTML = saved_emails;
   //document.getElementById("FName").innerHTML = saved_FirstName;
   //document.getElementById("LName").innerHTML = saved_LastName;
-  document.getElementById("random").innerHTML = "This is your new friend! " + saved_FirstName[randnum];
-  document.getElementById("emails").innerHTML = "Contact them here!" + saved_emails[randnum];
+  document.getElementById("Bestfriend").innerHTML = "This is your new friend! " + saved_FirstName[randnum];
+  document.getElementById("emails").innerHTML = "Contact them here! " + saved_emails[randnum];
+  document.getElementById("myEmail").value = ''
+  document.getElementById("myFirst").value = ''
+  document.getElementById("myLast").value = ''
+
+
 
 }
 </script>

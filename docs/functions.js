@@ -114,6 +114,7 @@ function showQuestion()
   b.innerHTML = myQuestions[runningQuestion].b;
   c.innerHTML = myQuestions[runningQuestion].c;
   d.innerHTML = myQuestions[runningQuestion].d;
+  nextButton.style.opacity = "0.5";
 }
 
 // runs when you click one of the answer options
@@ -139,6 +140,11 @@ function getPoints(answer)
     response.innerHTML = "You responded: " + myQuestions[runningQuestion].d;
   }
   nextButton.style.display = "block";
+
+  a.style.display = "none";
+  b.style.display = "none";
+  c.style.display = "none";
+  d.style.display = "none";
 }
 
 // runs when you click the Next Question button
@@ -146,20 +152,19 @@ function nextQuestion()
 {
   response.innerHTML = null;
 
-
-
-
   runningQuestion++;
   showQuestion();
-  if(runningQuestion === myQuestions.length-1)
+  if(runningQuestion === 8)
   {
     nextButton.style.display = "none";
     results.style.display = "block";
+    results.style.opacity = "1";
   }
 }
 
 // display the quiz results
 function quizResults()
 {
-  document.getElementById('results').innerHTML = "<p>Your score is " + points + "!</p>";
+  results.style.opacity = "1";
+  results.innerHTML = "<p>Your score is " + points + "!</p>";
 }

@@ -473,7 +473,8 @@ dark minimal
 	box-shadow: 		inset 0 	1px 0 0 rgb(5, 197, 197);
 	background: aqua;
 	border: solid 1px aqua;
-	text-shadow:  0 1px 0 rgb(5, 197, 197);
+    text-shadow:  0 1px 0 rgb(5, 197, 197);
+    opacity:0;
 }
 
 	.dark-minimal-btn:hover{

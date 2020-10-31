@@ -185,7 +185,18 @@ header h2{
     background-repeat: no-repeat;
     background-size: cover;
     padding:10px;
+    font-size: 20px;
 }
+.friends ul{
+    list-style-type: none;
+    text-align: center;
+}
+.friends li{
+    display:inline-block;
+    margin-right: 50px;
+    text-align: center;
+}
+
 .news{
     background-image: url("images/white.jpg");
     background-position-y: center;
@@ -221,9 +232,11 @@ header h2{
 
 .home {
     background-image: url("images/blue.jpg");
-    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    background-position-y: 0;
+    background-position-x: 0;
 }
 
 
@@ -289,6 +302,12 @@ header h2{
 }
 .details p{
     padding-bottom: 5px;
+}
+.details input{
+    margin-left:20px
+}
+.special input{
+    margin-left:67px
 }
 
 /*For the news pages*/

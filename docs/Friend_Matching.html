@@ -11,26 +11,32 @@
             <li><a href="Poll.html">Wellness Poll</a></li>
             <li><a href="Friend_Matching.html">Friend Matching</a></li>
             <li><a href="Positive_News.html">Positive News</a></li>
-            <li><a href="Pen_Pals.html">Pen Pals</a></li>
             <li><a href="About_Us.html">About us</a></li>
         </ul>
       <h2>Friend Matching</h2>
   </header>  
   <nav class="friends">
-    <!-- Just to look at picture, can delete -->
-    <!DOCTYPE html>
+    <ul>
+      <li>
+        <nav class="details">
+          First Name: <input type="text" id="myFirst" name="fname" value=" "><br>
+          Last Name:  <input type="text" id="myLast" name="lname" value=" "><br>
+          <nav class="special">
+            Email:      <input type="text" id="myEmail" name="email" value=" "><br>
+          </nav>  
+          <p>Click the button to meet someone super cool!</p>
 
-First Name: <input type="text" id="myFirst" name="fname" value=" "><br>
-Last Name: <input type="text" id="myLast" name="lname" value=" "><br>
-Email: <input type="text" id="myEmail" name="email" value=" "><br>
-
-<p>Click the button to display the value of the name attribute of the text field.</p>
-
-<button onclick="myFunction()">Click to find your friend!</button>
-
-<p id="Bestfriend"></p>
-<p id="emails"></p>
-    
+          <button class="gradient-button-1" onclick="myFunction()">Click to find your friend!</button>
+          <p id="Bestfriend"></p>
+          <p id="emails"></p>
+    </li>
+    <li class="i_descriptions">
+      <figure>
+        <img src="images/happytyping.jpg" alt="women smiling and typing">
+      </figure>
+    </li>
+  </ul>
+  </nav>
 <script>
 var saved_emails = ["tania@gmail.com", "meghaneel@gmail.com", "rachelLash@gmail.come", "quinNhunk@gmail.com", "blake@yahoo.com", "dan@kik.com", "carly@icarly.com", "mikeNug@usa.com"];
 var saved_FirstName = ["Tania", "Meghan", "Rachel", "Quinn", "Blake", "Dan", "Carly", "Mike"];
@@ -49,38 +55,8 @@ function myFunction() {
   document.getElementById("myEmail").value = ''
   document.getElementById("myFirst").value = ''
   document.getElementById("myLast").value = ''
-
-
-
 }
 </script>
-
-
-</body>
-</html>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
   </nav>
   <footer>
     sci's the limit * University of Pittsburgh * CSC Hacks 2020

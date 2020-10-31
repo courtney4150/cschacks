@@ -173,20 +173,20 @@ function quizResults()
 {
   results.style.opacity = "1";
   results.innerHTML = "<p>Your score is " + points + "!</p>";
-  if(points > 24)
+  if(points > 21)
   {
-    recommendation.innerHTML = "<p>Keep up the awesome work!</p>"
+    recommendation.innerHTML = "<p>Hmmm... did you somehow cheat on the quiz cause that's a really good score! Keep it up!<br>But I'll keep my eye on you next time you take the quiz.</p>"
   }
-  else if (points > 16)
+  else if (points > 13)
   {
-    recommendation.innerHTML = "<p>Check out our happy news page!</p>"
+    recommendation.innerHTML = "<p>I've seen better, but I've also seen worse. Reflect on the results and think about what you can change to increase your mood.<br>One possible thing you can do is check out our totally righteous Positive News Outlet!</p>"
   }
-  else if (points > 10)
+  else if (points > 7)
   {
-    recommendation.innerHTML = "<p>Check out our friend matching service! Everyone needs someone to talk to.</p>"
+    recommendation.innerHTML = "<p>I can tell you've been having a pretty rought time lately.<br>Maybe try checking out our friend matching service! Everyone needs someone to talk to occasionally.</p>"
   }
-  else if (points > 0)
+  else if (points > -1)
   {
-    recommendation.innerHTML = "<p>Here are the University's mental health resources. They offer a ton of resources and are always there to help.</p>"
+    recommendation.innerHTML = "<p>Here are the University's mental health resources. They offer a ton of resources and are always there to help.<br><a href='https://www.studentaffairs.pitt.edu/cc/'>Click Here</a></p>"
   }
 }
